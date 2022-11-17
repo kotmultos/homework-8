@@ -64,14 +64,9 @@ public class Computer {
     return this.ramUsed;
   }
 
-  public Computer restart() {
-    return builder()
-            .ram(this.ram)
-            .cores(this.cores)
-            .name(this.name)
-            .operatingSystem(this.operatingSystem)
-            .number(this.number)
-            .build();
+  public int restart() {
+    this.ramUsed = (int)((ram *1000 * 0.3))/1000;
+    return this.ramUsed;
   }
 
   public static class ComputerBuilder {
